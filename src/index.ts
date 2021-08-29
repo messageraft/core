@@ -1,3 +1,5 @@
-export function foo() {
-  console.log('bazz!!!')
+export class Core {
+  strategies: string[] = []
+
+  constructor(options: any) {}
 }
