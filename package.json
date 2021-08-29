@@ -1,0 +1,41 @@
+{
+  "name": "@messageraft/core",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Messageraft",
+  "repository": "messageraft/core",
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "types": "dist/main/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "build": "run-s clean format build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "build:umd": "webpack --progress",
+    "types-generate": "dts-bundle-generator --umd-module-name 'messageraft' -o dist/messageraft.d.ts src/index.ts",
+    "dev": "ts-node-dev --respawn ./src/index.ts",
+    "prepublish": "yarn build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.4",
+    "dts-bundle-generator": "^5.9.0",
+    "dts-gen": "^0.6.0",
+    "husky": "^7.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.5",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
