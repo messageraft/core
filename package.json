@@ -14,7 +14,7 @@
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
     "types-generate": "dts-bundle-generator --umd-module-name 'messageraft' -o dist/messageraft.d.ts src/index.ts",
-    "dev": "tsc -w",
+    "tsc:watch": "tsc -w",
     "test": "ts-node-dev --respawn ./test.ts"
   },
   "husky": {
