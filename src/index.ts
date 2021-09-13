@@ -9,6 +9,8 @@ import {
   SmsProvider,
   EmailOptions,
   Logger,
+  DirectMessageProvider,
+  DirectMessageOptions,
 } from '@messageraft/common'
 import clc from 'cli-color'
 
@@ -57,6 +59,8 @@ export class Core {
         return (requiredProvider as EmailProvider).send(data as EmailOptions)
       case ProviderType.SMS:
         return (requiredProvider as SmsProvider).send(data as SmsOptions)
+      case ProviderType.DIRECT_MESSAGE:
+        return (requiredProvider as DirectMessageProvider).send(data as DirectMessageOptions)
       default:
         throw new Error(`Provider type ${requiredProvider.type} is not supported`)
     }
