@@ -1,9 +1,30 @@
 {
   "name": "@messageraft/core",
   "version": "0.0.1",
-  "license": "MIT",
+  "description": "Core lib for Messageraft server",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "messageraft"
+  ],
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "homepage": "https://messageraft.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/messageraft/core.git"
+  },
+  "bugs": "https://github.com/messageraft/core/issues",
+  "files": [
+    "dist",
+    "src"
+  ],
   "author": "Messageraft",
-  "repository": "messageraft/core",
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
   "types": "dist/main/index.d.ts",
