@@ -57,7 +57,7 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@messageraft/common": "0.0.1",
+    "@messageraft/common": "^0.0.2",
     "cli-color": "^2.0.0"
   }
 }
