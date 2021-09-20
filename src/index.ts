@@ -47,7 +47,7 @@ export class Core {
     )
   }
 
-  async send(data: EmailOptions | SmsOptions, providerName: ProviderName) {
+  async send(data: EmailOptions | SmsOptions | DirectMessageOptions, providerName: ProviderName) {
     const requiredProvider = this.providers.find((provider) => provider.name === providerName)
 
     if (!requiredProvider) {
