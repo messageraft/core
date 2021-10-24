@@ -1,6 +1,6 @@
 {
   "name": "@messageraft/core",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Core lib for Messageraft server",
   "keywords": [
     "javascript",
@@ -58,7 +58,7 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@messageraft/common": "^0.0.4",
+    "@messageraft/common": "^0.0.5",
     "cli-color": "^2.0.0"
   }
 }
